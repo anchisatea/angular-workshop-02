@@ -70,9 +70,9 @@
   
           </thead>
   
-          <tbody>
+          <tbody  *ngIf="products.length > 0">
   
-            <tr>
+            <tr *ngFor="let product of products">
   
               <th>
   
@@ -80,11 +80,11 @@
   
               </th>
   
-              <th>0001</th>
-  
-              <th>Name 01</th>
-  
-              <th>1000.00</th>
+              <th>{{ product.code }}</th>
+
+              <th>{{ product.name }}</th>
+
+              <th>{{ product.price }}</th>
   
               <th>Yes</th>
   
@@ -92,43 +92,17 @@
   
             </tr>
   
+        </tbody>
+
+        <tbody *ngIf="products.length == 0">
+           
             <tr>
   
               <th>
   
-                XXX
+                ไม่พบข้อมูลสินค้า
   
               </th>
-  
-              <th>0002</th>
-  
-              <th>Name 02</th>
-  
-              <th>1000.00</th>
-  
-              <th>Yes</th>
-  
-              <th>****</th>
-  
-            </tr>
-  
-            <tr>
-  
-              <th>
-  
-                XXX
-  
-              </th>
-  
-              <th>0003</th>
-  
-              <th>Name 03</th>
-  
-              <th>1000.00</th>
-  
-              <th>Yes</th>
-  
-              <th>****</th>
   
             </tr>
   
