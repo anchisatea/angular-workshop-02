@@ -1,117 +1,77 @@
-<div class='card'>
+<div class="card">
+  <div class="card-header">
+    List of Product Page
+  </div>
 
-    <div class='card-header'>
-  
-      List of Product Page
-  
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-2">Filter by:</div>
+
+      <div class="col-md-4">
+        <select>
+          <option>Choosing</option>
+
+          <option>TODO</option>
+
+          <option>TODO</option>
+        </select>
+      </div>
     </div>
-  
-    <div class='card-body'>
-  
-      <div class='row'>
-  
-        <div class='col-md-2'>Filter by:</div>
-  
-        <div class='col-md-4'>
-  
-          <select>
-  
-            <option>Choosing</option>
-  
-            <option>TODO</option>
-  
-            <option>TODO</option>
-  
-          </select>
-  
-        </div>
-  
+
+    <div class="row">
+      <div class="col-md-6">
+        Filtered by ...
       </div>
-  
-      <div class='row'>
-  
-        <div class='col-md-6'>
-  
-          Filtered by ...
-  
-        </div>
-  
-      </div>
-  
-      <div class='table-responsive'>
-  
-        <table class='table'>
-  
-          <thead>
-  
+    </div>
+
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
           <tr>
-  
             <th>
-  
-              <button class='btn btn-primary'>
-  
+              <button class="btn btn-primary">
                 Product Image
-  
               </button>
-  
             </th>
-  
+
             <th>Product Code</th>
-  
+
             <th>Product Name</th>
-  
+
             <th>Price</th>
-  
+
             <th>Available</th>
-  
+
             <th>Rating</th>
-  
           </tr>
-  
-          </thead>
-  
-          <tbody  *ngIf="products.length > 0">
-  
-            <tr *ngFor="let product of products">
-  
-              <th>
-  
-                XXX
-  
-              </th>
-  
-              <th>{{ product.code }}</th>
+        </thead>
 
-              <th>{{ product.name }}</th>
+        <tbody *ngIf="products.length > 0">
+          <tr *ngFor="let product of products">
+            <th>
+              XXX
+            </th>
 
-              <th>{{ product.price }}</th>
-  
-              <th>Yes</th>
-  
-              <th>{{ product.rating }}</th>
-  
-            </tr>
-  
+            <th>{{ product.code }}</th>
+
+            <th>{{ product.name }}</th>
+
+            <th>{{ product.price }}</th>
+
+            <th>Yes</th>
+
+            <th>{{ product.rating }}</th>
+          </tr>
         </tbody>
 
         <tbody *ngIf="products.length == 0">
-           
-            <tr>
-  
-              <th>
-  
-                ไม่พบข้อมูลสินค้า
-  
-              </th>
-  
-            </tr>
-  
-          </tbody>
-  
-        </table>
-  
-      </div>
-  
+          <tr>
+            <th>
+              ไม่มีข้อมูลสินค้า
+            </th>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  
   </div>
+</div>
