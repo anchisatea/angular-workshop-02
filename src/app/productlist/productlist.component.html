@@ -6,13 +6,10 @@
   <div class="card-body">
     <div class="row">
       <div class="col-md-2">Filter by:</div>
-
       <div class="col-md-4">
         <select>
           <option>Choosing</option>
-
           <option>TODO</option>
-
           <option>TODO</option>
         </select>
       </div>
@@ -49,16 +46,17 @@
         <tbody *ngIf="products.length > 0">
           <tr *ngFor="let product of products">
             <th>
-              XXX
+              {{ product.imageUrl }}
             </th>
 
             <th>{{ product.code }}</th>
 
             <th>{{ product.name }}</th>
 
-            <th>{{ product.price }}</th>
+            <th>{{ product.price.toFixed(2) }}</th>
 
-            <th>Yes</th>
+            <th *ngIf="product.available">Yes</th>
+            <th *ngIf="product.available == false">No</th>
 
             <th>{{ product.rating }}</th>
           </tr>

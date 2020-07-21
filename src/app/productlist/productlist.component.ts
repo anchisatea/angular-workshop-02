@@ -4,19 +4,16 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-productlist',
   templateUrl: './productlist.component.html',
-  styleUrls: ['./productlist.component.css']
+  styleUrls: ['./productlist.component.css'],
 })
 export class ProductlistComponent implements OnInit {
   products: Product[] = [];
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
-    const p1 = new Product('01', 'Book 01', 100.0, 4.0);
-    const p2 = new Product('02', 'Book 02', 350.0, 5.0);
-    const p3 = new Product('03', 'Book 03', 500.0, 2.5);
-    this.products.push(p1,p2,p3);
-
+    const p1 = new Product('01', 'Book 01', 100.0, 4.0, true, 'xxx');
+    const p2 = new Product('02', 'Book 02', 350.0, 5.0, true, 'xxx');
+    const p3 = new Product('03', 'Book 03', 500.0, 2.5, true, 'xxx');
+    this.products.push(p1, p2, p3);
   }
-
 }
