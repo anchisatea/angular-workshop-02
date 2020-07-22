@@ -39,12 +39,21 @@
           <tbody *ngIf="products.length > 0">
             <tr *ngFor="let product of products | product: filterData">
               <th>
-                {{ product.imageUrl }}
+                XXX
               </th>
 
               <th>{{ product.code }}</th>
 
-              <th>{{ product.name | uppercase | productName }}</th>
+              <th
+                [routerLink]="['/productDetail/' + product.code]"
+                (click)="onProductDetail(product)"
+              >
+                {{ product.name | uppercase | productName: " " }}
+              </th>
+
+              <!-- <th> -->
+              <!-- <app-product-detail [productDetail]= "product.name | productName: ' ' | upppercase"></app-product-detail>  -->
+              <!-- </th> -->
 
               <th>{{ product.price | number: ".2" }}</th>
 

@@ -9,6 +9,7 @@ import { Observable, of } from 'rxjs';
 export class ProductService {
   //constructor(private http: HttpClient) {}
   constructor() {}
+  public product: Product;
 
   getAllProduct(): Observable<Product[]> {
     const p1 = new Product('1101', 'Name 01', 1000.0, 1, true);
@@ -16,5 +17,9 @@ export class ProductService {
     const p3 = new Product('1103', 'Name 03', 3500.0, 3, true);
     return of([p1, p2, p3]);
     // return this.http.get<Product[]>('http://165.22.255.58:3000/products');
+  }
+
+  saveProductDetail(product: Product): void {
+    this.product = product;
   }
 }

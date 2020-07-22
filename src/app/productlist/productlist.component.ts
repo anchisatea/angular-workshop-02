@@ -1,6 +1,7 @@
 import { Product } from './../models/product';
 import { Component, OnInit, Input } from '@angular/core';
 import { ProductService } from '../product.service';
+type Products = Product[];
 
 @Component({
   selector: 'app-productlist',
@@ -33,7 +34,15 @@ export class ProductlistComponent implements OnInit {
       return (this.products = products);
     });
   }
+
   onRatingClicked(message: string): void {
     alert(message);
+  }
+
+  onProductDetail(product: Product): void {
+      this.service.saveProductDetail(product);
+    }
+  
+  
   }
 }
