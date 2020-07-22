@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductlistComponent implements OnInit {
   products: Product[] = [];
-  filterData: string;
+  filterData: string = ' ';
 
   constructor() {}
 
