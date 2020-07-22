@@ -18,7 +18,7 @@ export class ProductService {
       1000.0,
       1,
       true,
-      'xxx'
+      'https://www.kiehls.co.th/media/catalog/product/cache/2/thumbnail/4dc2e3274ef0740eb55a46bfb4da7e12/3/6/3605971864865.1583814297.jpg'
     );
     const p2 = new Product('1102', 'Repair cream 02', 2500.5, 2, true, 'xxx');
     const p3 = new Product('1103', 'Perfume 03', 3500.0, 3, true, 'xxx');
