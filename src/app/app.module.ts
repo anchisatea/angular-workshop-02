@@ -12,14 +12,14 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LoginComponent,
-    ProductlistComponent,
-    ProductNamePipe,
-    ProductPipe,
+    //AppComponent,
+    // LoginComponent,
+    // ProductlistComponent,
+    //ProductNamePipe,
+    // ProductPipe,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [],
 })
 export class AppModule {}
