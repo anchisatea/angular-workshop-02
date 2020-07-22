@@ -7,8 +7,8 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root',
 })
 export class ProductService {
-  constructor(private http: HttpClient) {}
-  //constructor () {}
+  //constructor(private http: HttpClient) {}
+  constructor() {}
 
   getAllProduct(): Observable<Product[]> {
     const p1 = new Product('1101', 'Name 01', 1000.0, 1, true);
