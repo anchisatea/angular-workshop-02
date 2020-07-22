@@ -53,7 +53,7 @@
 
             <th>{{ product.name }}</th>
 
-            <th>{{ product.price.toFixed(2) }}</th>
+            <th>{{ product.price | number: "1.2" }}</th>
 
             <th *ngIf="product.available">Yes</th>
             <th *ngIf="product.available == false">No</th>
