@@ -20,7 +20,14 @@ export class ProductService {
       true,
       'https://www.kiehls.co.th/media/catalog/product/cache/2/thumbnail/4dc2e3274ef0740eb55a46bfb4da7e12/3/6/3605971864865.1583814297.jpg'
     );
-    const p2 = new Product('1102', 'Repair cream 02', 2500.5, 2, true, 'xxx');
+    const p2 = new Product(
+      '1102',
+      'Repair cream 02',
+      2500.5,
+      2,
+      true,
+      'https://images.ulta.com/is/image/Ulta/2254420?op_sharpen=1&resMode=bilin&qlt=85&wid=800&hei=800&fmt=jpg'
+    );
     const p3 = new Product('1103', 'Perfume 03', 3500.0, 3, true, 'xxx');
     return of([p1, p2, p3]);
     // return this.http.get<Product[]>('http://165.22.255.58:3000/products');
