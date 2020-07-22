@@ -40,9 +40,6 @@ export class ProductlistComponent implements OnInit {
   }
 
   onProductDetail(product: Product): void {
-      this.service.saveProductDetail(product);
-    }
-  
-  
+    this.service.saveProductDetail(product);
   }
 }
