@@ -12,11 +12,11 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    //AppComponent,
-    // LoginComponent,
-    // ProductlistComponent,
-    //ProductNamePipe,
-    // ProductPipe,
+    AppComponent,
+    LoginComponent,
+    ProductlistComponent,
+    ProductNamePipe,
+    ProductPipe,
   ],
   imports: [HttpClientModule],
   providers: [],
