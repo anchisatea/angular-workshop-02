@@ -6,6 +6,7 @@ import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 })
 export class ProductNamePipe implements PipeTransform {
   transform(input: string, target: string): string {
-    return input.replace(target, '-');
+    target = input.replace(/ /g, '-');
+    return target;
   }
 }
