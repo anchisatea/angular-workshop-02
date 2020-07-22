@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { ProductNamePipe } from './product-name.pipe';
-import { ProductFilterPipe } from './product-filter.pipe';
 import { ProductPipe } from './product.pipe';
 
 @NgModule({
@@ -15,14 +14,10 @@ import { ProductPipe } from './product.pipe';
     LoginComponent,
     ProductlistComponent,
     ProductNamePipe,
-    ProductFilterPipe,
-    ProductPipe
+    ProductPipe,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
