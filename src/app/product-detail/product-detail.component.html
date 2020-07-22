@@ -1,1 +1,23 @@
 <p>product-detail works!</p>
+
+<div class="card">
+  <div class="container">
+    <img
+      [src]="product.imageUrl"
+      [alt]="product.imageUrl"
+      style="width: 50%;"
+    />
+    <h4>
+      <b>{{ product.name | uppercase | productName: "-" }}</b>
+    </h4>
+    <p>Code: {{ product.code }}</p>
+    <p>Price: {{ product.price | number: "1.2" }}</p>
+    <p>Available: <i>Yes</i></p>
+    <p>
+      <app-rating
+        [rating]="product.rating"
+        (ratingClicked)="onRatingClicked($event)"
+      ></app-rating>
+    </p>
+  </div>
+</div>

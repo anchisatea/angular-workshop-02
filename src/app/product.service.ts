@@ -22,4 +22,8 @@ export class ProductService {
   saveProductDetail(product: Product): void {
     this.product = product;
   }
+
+  restoreProductDetail(): Product {
+    return this.product;
+  }
 }
