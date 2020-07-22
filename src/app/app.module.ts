@@ -18,8 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProductNamePipe,
     ProductPipe,
   ],
-  imports: [HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
-  bootstrap: [],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
