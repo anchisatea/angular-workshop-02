@@ -51,7 +51,7 @@
 
             <th>{{ product.code }}</th>
 
-            <th>{{ product.name }}</th>
+            <th>{{ product.name | uppercase | productName: " " }}</th>
 
             <th>{{ product.price | number: "1.2" }}</th>
 
