@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { ProductNamePipe } from './product-name.pipe';
 import { ProductFilterPipe } from './product-filter.pipe';
+import { ProductPipe } from './product.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ProductFilterPipe } from './product-filter.pipe';
     LoginComponent,
     ProductlistComponent,
     ProductNamePipe,
-    ProductFilterPipe
+    ProductFilterPipe,
+    ProductPipe
   ],
   imports: [
     BrowserModule,
