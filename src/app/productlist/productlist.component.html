@@ -2,76 +2,67 @@
   <div class="card-header">
     List of Product Page
   </div>
-
   <div class="card-body">
     <div class="row">
       <div class="col-md-2">Filter by:</div>
       <div class="col-md-4">
-        <input type ="text" [(NgModel)]= "filterData" />
+        <input type="text" [(ngModel)]="filterData" />
       </div>
-        <select>
-          <option>Choosing</option>
-          <option>TODO</option>
-          <option>TODO</option>
-        </select>
+
+      <div class="row">
+        <div class="col-md-6">Filtered by {{ filterData }}</div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-md-6">
-        Filtered by {{ filterData }}
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>
+                <button class="btn btn-primary">
+                  Product Image
+                </button>
+              </th>
+
+              <th>Product Code</th>
+
+              <th>Product Name</th>
+
+              <th>Price</th>
+
+              <th>Available</th>
+
+              <th>Rating</th>
+            </tr>
+          </thead>
+
+          <tbody *ngIf="products.length > 0">
+            <tr *ngFor="let product of products | product: filterData">
+              <th>
+                {{ product.imageUrl }}
+              </th>
+
+              <th>{{ product.code }}</th>
+
+              <th>{{ product.name | uppercase | productName: " " }}</th>
+
+              <th>{{ product.price | number: "1.2" }}</th>
+
+              <th *ngIf="product.available">Yes</th>
+              <th *ngIf="product.available == false">No</th>
+
+              <th>{{ product.rating }}</th>
+            </tr>
+          </tbody>
+
+          <tbody *ngIf="products.length == 0">
+            <tr>
+              <th>
+                ไม่มีข้อมูลสินค้า
+              </th>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </div>
-
-    <div class="table-responsive">
-      <table class="table">
-        <thead>
-          <tr>
-            <th>
-              <button class="btn btn-primary">
-                Product Image
-              </button>
-            </th>
-
-            <th>Product Code</th>
-
-            <th>Product Name</th>
-
-            <th>Price</th>
-
-            <th>Available</th>
-
-            <th>Rating</th>
-          </tr>
-        </thead>
-
-        <tbody *ngIf="products.length > 0">
-          <tr *ngFor="let product of products | product: filterData">
-            <th>
-              {{ product.imageUrl }}
-            </th>
-
-            <th>{{ product.code }}</th>
-
-            <th>{{ product.name | uppercase | productName: " " }}</th>
-
-            <th>{{ product.price | number: "1.2" }}</th>
-
-            <th *ngIf="product.available">Yes</th>
-            <th *ngIf="product.available == false">No</th>
-
-            <th>{{ product.rating }}</th>
-          </tr>
-        </tbody>
-
-        <tbody *ngIf="products.length == 0">
-          <tr>
-            <th>
-              ไม่มีข้อมูลสินค้า
-            </th>
-          </tr>
-        </tbody>
-      </table>
     </div>
   </div>
 </div>
