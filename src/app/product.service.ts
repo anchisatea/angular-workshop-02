@@ -26,7 +26,7 @@ export class ProductService {
       2500.5,
       2,
       true,
-      'https://images.ulta.com/is/image/Ulta/2254420?op_sharpen=1&resMode=bilin&qlt=85&wid=800&hei=800&fmt=jpg'
+      'https://www.eucerin.co.th/~/media/eucerin/local/th/home-stage-teasers/2020/202003-product-image-3d-packshot/ph5/ph5_facial-cleanser/ph5_facial-cleanser.png?h=240&mw=290&w=290&rh=0&devicepixelratio=2&hash=67B54CB3188E00AC855A92E9E179BA05'
     );
     const p3 = new Product('1103', 'Perfume 03', 3500.0, 3, true, 'xxx');
     return of([p1, p2, p3]);
