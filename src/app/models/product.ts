@@ -8,7 +8,7 @@ export class Product {
     public name: string,
     public price: number,
     public rating: number,
-    public available: boolean,
-    public imageUrl: string
-  ) {}
+    public available: boolean
+  ) //public imageUrl: string
+  {}
 }
