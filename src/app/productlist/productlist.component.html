@@ -44,7 +44,7 @@
         </thead>
 
         <tbody *ngIf="products.length > 0">
-          <tr *ngFor="let product of products">
+          <tr *ngFor="let product of products | product: filterData">
             <th>
               {{ product.imageUrl }}
             </th>
