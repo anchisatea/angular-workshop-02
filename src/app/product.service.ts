@@ -12,8 +12,22 @@ export class ProductService {
   public product: Product;
 
   getAllProduct(): Observable<Product[]> {
-    const p1 = new Product('1101', 'Facial cleanser 01', 1000.0, 1, true, 'xx');
-    const p2 = new Product('1102', 'Repair cream 02', 2500.5, 2, true, 'xx');
+    const p1 = new Product(
+      '1101',
+      'Facial cleanser 01',
+      1000.0,
+      1,
+      true,
+      'https://d2pa5gi5n2e1an.cloudfront.net/global/images/product/beauty/Kiehls_Ultra_Facial_Cream_Daily_Facial_Moisturizer/Kiehls_Ultra_Facial_Cream_Daily_Facial_Moisturizer_L_1.jpg'
+    );
+    const p2 = new Product(
+      '1102',
+      'Repair cream 02',
+      2500.5,
+      2,
+      true,
+      'https://de.lnwfile.com/zak75d.jpg'
+    );
     const p3 = new Product(
       '1103',
       'Perfume 03',
