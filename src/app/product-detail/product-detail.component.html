@@ -2,11 +2,6 @@
 
 <div class="card">
   <div class="container">
-    <img
-      [src]="product.imageUrl"
-      [alt]="product.imageUrl"
-      style="width: 50%;"
-    />
     <h4>
       <b>{{ product.name | uppercase | productName: "-" }}</b>
     </h4>
@@ -19,5 +14,10 @@
         (ratingClicked)="onRatingClicked($event)"
       ></app-rating>
     </p>
+    <img
+      [src]="product.imageUrl"
+      [alt]="product.imageUrl"
+      style="width: 50%;"
+    />
   </div>
 </div>
