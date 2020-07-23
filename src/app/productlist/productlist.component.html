@@ -42,8 +42,13 @@
                 <img src="{{ product.imageUrl }}" width="50 px" />
               </th>
 
-              <th>{{ product.code }}</th>
-
+              <!-- <th>{{ product.code }}</th> -->
+              <th
+                [routerLink]="['/pd-detail/' + product.code]"
+                (click)="onProductDetail(product)"
+              >
+                {{ product.code }}
+              </th>
               <th
                 [routerLink]="['/productDetail/' + product.code]"
                 (click)="onProductDetail(product)"
